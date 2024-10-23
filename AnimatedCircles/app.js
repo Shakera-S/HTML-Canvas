@@ -47,14 +47,7 @@ var mouse = {
 var maxRadius = 40;
 // var minRadius = 2;
 
-var colorArray = [
-  '#ffaa33',
-  '#99ffaaa',
-  '#00ff00',
-  '#4411aa',
-  '#ff1100',
-
-];
+var colorArray = ["#C13F99", "#6A2473", "#331F40", "#FFDCE4", "#F2B28D"];
 
 window.addEventListener("mousemove", function (event) {
   mouse.x = event.x;
@@ -103,7 +96,6 @@ function Circle(x, y, dx, dy, radius) {
       if (this.radius < maxRadius) {
         this.radius += 1;
       }
-      
     } else if (this.radius > this.minRadius) {
       this.radius -= 1;
     }
@@ -116,7 +108,7 @@ function Circle(x, y, dx, dy, radius) {
 var circleArray = [];
 
 // Ensures that the circles all spawn within the height and width of the canvas, and also that they spawn in different locations each refresh
-for (var i = 0; i < 150; i++) {
+for (var i = 0; i < 600; i++) {
   var radius = Math.random() * 3 + 1;
   var x = Math.random() * (innerWidth - radius * 2) + radius;
   var y = Math.random() * (innerHeight - radius * 2) + radius;
